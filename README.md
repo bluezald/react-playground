@@ -1,4 +1,5 @@
 # react-playground
+is a repo of react and react-native projects
 
 ## Sample Projects
 ### my-app
@@ -6,5 +7,11 @@
 to run the project, go to the root directory and run
 ```
 npm run start
+```
+### HelloNative
+- this is a react-native project.
+to run the project, go to the root directoy and run
+```
+react-native run-ios
 ```
 
