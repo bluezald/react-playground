@@ -15,3 +15,4 @@ to run the project, go to the root directoy and run
 react-native run-ios
 ```
 
+![Roadmap](https://github.com/adam-golab/react-developer-roadmap/blob/master/roadmap.png)
