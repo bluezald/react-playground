@@ -20,4 +20,10 @@ It lets you compose complex UIs from small and isolated pieces of code called �
 
 - All React component classes that have a constructor should start it with a super(props) call.
 
-In React, **function components** are a simpler way to write components that only contain a render method and don’t have their own state. 
+In React, **function components** are a simpler way to write components that only contain a render method and don’t have their own state.
+
+## Reserved Words
+- key
+    - Keys do not need to be globally unique; they only need to be unique between components and their siblings.
+
+* ref
