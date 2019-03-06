@@ -27,6 +27,11 @@ In React, **function components** are a simpler way to write components that onl
 ## Reserved Words
 - key
     - Keys do not need to be globally unique; they only need to be unique between components and their siblings.
+    -  A “key” is a special string attribute you need to include when creating lists of elements. We’ll discuss why it’s important in the next section.
+    - The best way to pick a key is to use a string that uniquely identifies a list item among its siblings. Most often you would use IDs from your data as keys
+    - We don’t recommend using indexes for keys if the order of items may change. This can negatively impact performance and may cause issues with component state.
+    - When handling arrays in React, utilisation of the 'key' attribute on each element can be crucial for avoiding needless rerender performance hits
+    - A good rule of thumb is that elements inside the map() call need keys.
 
 * ref
 ---
