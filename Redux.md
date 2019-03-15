@@ -3,6 +3,8 @@
 The only way to change the state tree is to emit an action, an object describing what happened.
 - The only way to mutate the internal state is to dispatch an action.
 
+![Redux Flow](https://cdn-images-1.medium.com/max/800/1*ucOxan56LKUm3gkjaePwRg.png)
+
 ```js
 import { createStore } from 'redux'
 
@@ -39,7 +41,23 @@ store.dispatch({ type: 'INCREMENT' })
 ## Async
 - When you call an asynchronous API, there are two crucial moments in time: the moment you start the call, and the moment when you receive an answer (or a timeout).
 
+## Container Components
+- "Container components are components that are aware of Redux"
+
+Well, a container component is a component that is responsible for retrieving data, and in order to get that data, the component needs to use Redux's connect and mapStateToProps functions.
+
+---
+
+# Redux Thunk
+- With a plain basic Redux store, you can only do simple synchronous updates by dispatching an action. Middleware extend the store's abilities, and let you write async logic that interacts with the store
+- A **thunk** is a function that wraps an expression to delay its evaluation.
+
+### Middleware
+- middleware is some code you can put between the framework receiving a request, and the framework generating a response. 
 
 Sources:
 - https://redux.js.org/introduction/getting-started
 - https://redux.js.org/advanced/async-actions
+- https://www.thegreatcodeadventure.com/the-react-plus-redux-container-pattern/
+- https://github.com/reduxjs/redux-thunk
+- https://medium.com/@aurelie.lebec/redux-and-react-native-simple-login-example-flow-c4874cf91dde
