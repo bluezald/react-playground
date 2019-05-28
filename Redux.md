@@ -51,9 +51,29 @@ Well, a container component is a component that is responsible for retrieving da
 # Redux Thunk
 - With a plain basic Redux store, you can only do simple synchronous updates by dispatching an action. Middleware extend the store's abilities, and let you write async logic that interacts with the store
 - A **thunk** is a function that wraps an expression to delay its evaluation.
+### Asynchronous thunks
+
+```js
+function fetchData(fn){
+  fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(json => fn(json))
+}
+
+
+const asyncThunk = function (){
+   return fetchData(function getData(data){
+      console.log(data)
+  })
+}
+
+asyncThunk()
+```
+- In the above code we are not calling the getData function immediately we only call the getData function whenever the data is available from the API endpoint.
+
 
 ### Middleware
-- middleware is some code you can put between the framework receiving a request, and the framework generating a response. 
+- middleware is some code you can put between the framework receiving a request, and the framework generating a response.
 
 Sources:
 - https://redux.js.org/introduction/getting-started
@@ -61,3 +81,4 @@ Sources:
 - https://www.thegreatcodeadventure.com/the-react-plus-redux-container-pattern/
 - https://github.com/reduxjs/redux-thunk
 - https://medium.com/@aurelie.lebec/redux-and-react-native-simple-login-example-flow-c4874cf91dde
+- https://reactgo.com/thunks-javascript/
