@@ -75,6 +75,19 @@ asyncThunk()
 ### Middleware
 - middleware is some code you can put between the framework receiving a request, and the framework generating a response.
 
+# API Reference
+
+## connect()
+- connects a React component to a Redux store.
+- It provides its connected component with the pieces of the data it needs from the store, and the functions it can use to dispatch actions to the store.
+- https://react-redux.js.org/api/connect
+- connect accepts four different parameters, all optional. By convention, they are called:
+    - mapStateToProps?: Function
+    - mapDispatchToProps?: Function | Object
+    - mergeProps?: Function
+    - options?: Object
+
+
 Sources:
 - https://redux.js.org/introduction/getting-started
 - https://redux.js.org/advanced/async-actions
