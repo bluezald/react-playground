@@ -87,6 +87,16 @@ asyncThunk()
     - mergeProps?: Function
     - options?: Object
 
+### mapStateToProps
+```
+mapStateToProps?: (state, ownProps?) => Object
+```
+
+### mapDispatchToProps
+```
+mapDispatchToProps?: Object | (dispatch, ownProps?) => Object
+```
+
 
 Sources:
 - https://redux.js.org/introduction/getting-started
