@@ -80,7 +80,13 @@ asyncThunk()
 ## connect()
 - connects a React component to a Redux store.
 - It provides its connected component with the pieces of the data it needs from the store, and the functions it can use to dispatch actions to the store.
+- The connect function is provided by Redux. It subscribes our container component to the store, so that it will be alerted when state changes.
+- Not every component will be connected, or subscribed, to the store. Only container, or "stateful", components will be connected to the store.
+
+
 - https://react-redux.js.org/api/connect
+- https://www.thegreatcodeadventure.com/react-redux-tutorial-part-iv-the-index-feature/
+
 - connect accepts four different parameters, all optional. By convention, they are called:
     - mapStateToProps?: Function
     - mapDispatchToProps?: Function | Object
