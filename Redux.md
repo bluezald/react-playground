@@ -44,6 +44,18 @@ store.dispatch({ type: 'INCREMENT' })
 - Actions are payloads of information that send data from your application to your store. They are the only source of information for the store. You send them to the store using store.dispatch().
 - Actions must have a type property that indicates the type of action being performed. Types should typically be defined as string constants. Once your app is large enough, you may want to move them into a separate module.
 
+#### Action Creators
+- In Redux, action creators simply return an action:
+```js
+function addTodo(text) {
+  return {
+    type: ADD_TODO,
+    text
+  }
+}
+```
+- The **dispatch()** function can be accessed directly from the store as store.dispatch(), but more likely you'll access it using a helper like react-redux's connect()
+
 ## Async
 - When you call an asynchronous API, there are two crucial moments in time: the moment you start the call, and the moment when you receive an answer (or a timeout).
 
