@@ -29,6 +29,12 @@ store.dispatch({ type: 'INCREMENT' })
 
 - Redux attempts to make state mutations predictable
 
+### Why Immutability is important
+- Immutable datastructures are an important technique for reducing software bugs, and they do this by simply being very limited about what you can do with them. There is one and only one thing that can be done with an immutable datastructure: data can be read from it.
+
+- References
+    - https://www.quora.com/Why-is-immutability-so-important-in-software-development
+
 - **Redux can be described in 3 fundamental principles**
 1. Single source of truth - the "state" of your app is stored in an **object** tree within a single store
 2. State is readonly - the only way to change the state is to emit an action, and object describing what happened. Expresses an intent to transform the state.
@@ -46,6 +52,12 @@ store.dispatch({ type: 'INCREMENT' })
 
 Well, a container component is a component that is responsible for retrieving data, and in order to get that data, the component needs to use Redux's connect and mapStateToProps functions.
 
+### Presentational Components vs Containers
+- Component is part of the React API. A Component is a class or function that describes part of a React UI.
+- Container is an informal term for a React component that is connect-ed to a redux store. Containers receive Redux state updates and dispatch actions, and they usually don't render DOM elements; they delegate rendering to presentational child components.
+
+- References
+    - https://stackoverflow.com/questions/43414254/difference-between-component-and-container-in-react-redux
 ---
 
 # Redux Thunk
