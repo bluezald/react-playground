@@ -199,3 +199,9 @@ render() {
 - **Bundling** is the process of following imported files and merging them into a single file: a “bundle”. This bundle can then be included on a webpage to load an entire app at once.
 - Bundling is great, but as your app grows, your bundle will grow too. Especially if you are including large third-party libraries.
 - Code-splitting your app can help you “lazy-load” just the things that are currently needed by the user, which can dramatically improve the performance of your app
+
+## HOC (Higher-Order Components)
+- Whereas a component transforms props into UI, a higher-order component transforms a component into another component.
+```js
+const EnhancedComponent = higherOrderComponent(WrappedComponent);
+```
