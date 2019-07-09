@@ -109,6 +109,35 @@ this.setState((state, props) => {
 ```componentWillUnmount()```
 - whenever the DOM produced by the component is removed. This is called “unmounting” in React.
 
+## Lifecycle Overview
+
+**Birth / Mounting**
+- Initialize / Construction
+- getDefaultProps() (React.createClass) or MyComponent.defaultProps (ES6 class)
+- getInitialState() (React.createClass) or this.state = ... (ES6 constructor)
+- componentWillMount()
+- render()
+- Children initialization & life cycle kickoff
+- componentDidMount()
+
+**Growth / Update**
+- componentWillReceiveProps()
+- shouldComponentUpdate()
+- componentWillUpdate()
+- render()
+- Children Life cycle methods
+- componentDidUpdate()
+
+**Death / Un-Mounting**
+- componentWillUnmount()
+- Children Life cycle methods
+- Instance destroyed for Garbage Collection
+
+![React Component Lifecycle](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/react-lifecycle-flow-chart-states.png)
+
+**- References:**
+    - https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/the_life_cycle_recap.html
+
 ## Handling Events
 - React events are named using camelCase, rather than lowercase.
 - It is recommended: binding in the constructor or using the class fields syntax, to avoid this sort of performance problem.
