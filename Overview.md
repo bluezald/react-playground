@@ -205,3 +205,59 @@ render() {
 ```js
 const EnhancedComponent = higherOrderComponent(WrappedComponent);
 ```
+
+## Hooks
+- let you split one component into smaller functions based on what pieces are related (such as setting up a subscription or fetching data), rather than forcing a split based on lifecycle methods. You may also opt into managing the component’s local state with a reducer to make it more predictable.
+- They let you use state and other React features without writing a class.
+
+- Existing Code
+```js
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <p>You clicked {this.state.count} times</p>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          Click me
+        </button>
+      </div>
+    );
+  }
+}
+```
+- When Using Hooks
+```js
+import React, { useState } from 'react';
+
+function Example() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
+
+// TODO: Transfer this to Javascript Fundamentals
+## State Management Libraries
+- A state management library gives you a convenient way to model your app state, derive computed values from it, and monitor it for changes.
+
+- Examples:
+    - Redux
+    - MobX
+    - Statesman.js
+- References:
+    - https://www.quora.com/What-is-a-state-management-library-in-Javascript
