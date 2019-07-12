@@ -24,3 +24,35 @@ renderGrid() {
     return rendereditems;
 }
 ```
+
+### File Handling Image
+
+```js
+render() {
+    return (
+        <form>
+            <div>
+                <div>
+                    <input type="file" onChange={ this.handleImageChange } />
+                </div>
+            </div>
+        </form>
+    );
+}
+
+handleImageChange = (event) => {
+    event.preventDefault();
+
+    let reader = new FileReader();
+    let file = event.target.files[0];
+
+    reader.onloadend = () => {
+        this.setState({
+            ...this.state,
+            image: reader.result
+        });
+    }
+    reader.readAsDataURL(file)
+}
+
+```
